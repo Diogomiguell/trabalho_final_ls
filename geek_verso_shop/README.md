@@ -21,4 +21,8 @@ php artisan key:generate
 php artisan migrate
 
 # Rode o servidor
+<<<<<<< HEAD
 php artisan serve
+=======
+php artisan serve
+>>>>>>> aab23d10228e3b4171b700fedcb57ebede071bc9
