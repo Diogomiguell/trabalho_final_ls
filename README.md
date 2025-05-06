@@ -1,15 +1,24 @@
-Desenvolvimento de um CRUD com Laravel, Autenticação, Upload
-de Imagem e Template AdminLTE
-Neste projeto, será desenvolvido um CRUD (Create, Read, Update, Delete) utilizando o
+<h2>Trabalho Final de Laboratório de Software </h2>
+
+<hr>
+
+<h4>Desenvolvimento de um CRUD com Laravel, Autenticação, Upload
+de Imagem e Template AdminLTE</h4>
+
+<p>Neste projeto, será desenvolvido um CRUD (Create, Read, Update, Delete) utilizando o
 framework Laravel, com o objetivo de aplicar os principais conceitos de desenvolvimento
 web com PHP. O sistema também conta com funcionalidades de autenticação de usuários
 (login e registro), upload de imagens e integração com o template AdminLTE, que oferece
-uma interface administrativa moderna e responsiva.
-Estrutura do Projeto
-A aplicação foi estruturada utilizando o Laravel 11, aproveitando o poder das rotas,
+uma interface administrativa moderna e responsiva.</p>
+
+<h4>Estrutura do Projeto</h4>
+
+<p>A aplicação foi estruturada utilizando o Laravel 11, aproveitando o poder das rotas,
 controllers, migrations, e do sistema de autenticação oferecido pelo framework. A escolha
-do Laravel se deu por sua robustez, segurança e arquitetura MVC bem definida.
-Funcionalidades Desenvolvidas
+do Laravel se deu por sua robustez, segurança e arquitetura MVC bem definida.</p>
+
+<h4>Funcionalidades Desenvolvidas</h4>
+
 1. Autenticação de Usuários
 Deve ser implementado um sistema de autenticação usando o Laravel Breeze, que oferece
 rotas e views simples para login e cadastro de usuários. Com isso, os usuários podem criar
