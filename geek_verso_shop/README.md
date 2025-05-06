@@ -1,12 +1,3 @@
-## 📌 Requisitos
-
-- PHP >= 8.2
-- Composer
-- MySQL ou outro banco compatível
-- Node.js (para assets via Vite, se necessário)
-
----
-
 ## ⚙️ Como rodar o projeto
 
 ```bash
