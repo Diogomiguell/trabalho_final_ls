@@ -1,56 +1,120 @@
-<h2>Trabalho Final de Laboratório de Software </h2>
+# 🚀 Trabalho Final – Laboratório de Software
 
-<hr>
+## 🛠️ CRUD com Laravel 11, Autenticação, Upload de Imagem e Template AdminLTE
 
-<h4>Desenvolvimento de um CRUD com Laravel, Autenticação, Upload
-de Imagem e Template AdminLTE</h4>
+Este projeto é um sistema web completo construído com o framework **Laravel**, incorporando:
 
-<p>Neste projeto, será desenvolvido um CRUD (Create, Read, Update, Delete) utilizando o
-framework Laravel, com o objetivo de aplicar os principais conceitos de desenvolvimento
-web com PHP. O sistema também conta com funcionalidades de autenticação de usuários
-(login e registro), upload de imagens e integração com o template AdminLTE, que oferece
-uma interface administrativa moderna e responsiva.</p>
+- Autenticação de usuários com Laravel Breeze 🧑‍💻
+- Interface administrativa moderna com **AdminLTE** 🎨
+- Operações **CRUD** completas 📁
+- Upload e exibição de imagens 🖼️
 
-<h4>Estrutura do Projeto</h4>
+---
 
-<p>A aplicação foi estruturada utilizando o Laravel 11, aproveitando o poder das rotas,
-controllers, migrations, e do sistema de autenticação oferecido pelo framework. A escolha
-do Laravel se deu por sua robustez, segurança e arquitetura MVC bem definida.</p>
+## 📂 Estrutura do Projeto
 
-<h4>Funcionalidades Desenvolvidas</h4>
+O sistema foi desenvolvido utilizando o **Laravel 11**, com aproveitamento dos seguintes recursos:
 
-1. Autenticação de Usuários
-Deve ser implementado um sistema de autenticação usando o Laravel Breeze, que oferece
-rotas e views simples para login e cadastro de usuários. Com isso, os usuários podem criar
-contas e acessar o sistema com segurança.
-2. Integração com o Template AdminLTE
-O template AdminLTE deverá ser integrado ao projeto para fornecer uma interface
-administrativa estilizada. O layout principal é adaptado para utilizar os componentes do
-AdminLTE, como menu lateral, cabeçalho e painéis. As views do Laravel devem ser
-modificadas para herdar esse layout base.
-3. CRUD de Registros
-Implemente as operações de CRUD para uma entidade de exemplo (por exemplo,
-"Produtos" ou "Eventos"). O sistema permite:
-● Criar novos registros, preenchendo um formulário com dados e imagem.
-● Visualizar a lista de registros com paginação e opções de ação.
-● Editar registros existentes com atualização de dados e imagem.
-● Excluir registros com confirmação.
-Campos para produtos: id, nome, descrição, quantidade, preço, nota de avaliação,
-imagem do produto.
-Campos para eventos: id, nome do evento, descrição, quantidade máxima de
-pessoas, preço do ingresso, nome da empresa organizadora, imagem do local.
-Obs: Os usuários do sistema não podem ver, atualizar ou excluir registros que não
-pertençam a eles mesmos.
-4. Upload de Imagens
-O sistema permite o envio de imagens junto aos dados dos registros. Ao fazer upload, o
-arquivo deverá ser armazenado na pasta storage/app/public, e o caminho é salvo no
-banco de dados. As imagens são exibidas nas views de listagem e de edição dos registros.
-Para essa tarefa deverá ser utilizada a facade Storage do Laravel para manipulação
-segura dos arquivos.
-Considerações Finais
-Este projeto demonstra a integração de recursos essenciais em aplicações web modernas
-com Laravel. O uso do AdminLTE traz um visual profissional e intuitivo, enquanto a
-funcionalidade de autenticação garante a segurança no acesso ao sistema. A possibilidade
-de upload de imagem complementa a funcionalidade do CRUD, permitindo trabalhar com
-conteúdos multimídia. O desenvolvimento segue boas práticas de organização de código,
-rotas nomeadas, e uso de recursos nativos do framework.
+- Sistema de rotas
+- Controllers e Migrations
+- Autenticação de usuários com Breeze
+- Arquitetura MVC
+- Integração com o AdminLTE para layout e UI
+
+> O Laravel foi escolhido por sua robustez, segurança e excelente organização de código.
+
+---
+
+## ✨ Funcionalidades
+
+### 1. 🔐 Autenticação de Usuários
+Implementada com **Laravel Breeze**, fornecendo:
+
+- Cadastro e login de usuários
+- Proteção de rotas e sessões seguras
+- Acesso restrito aos próprios registros
+
+---
+
+### 2. 🧩 Integração com o Template AdminLTE
+Interface administrativa estilizada com:
+
+- Menu lateral, cabeçalho e painéis
+- Layout responsivo e profissional
+- Views personalizadas herdando layout base
+
+---
+
+### 3. 📦 CRUD de Registros
+Implementado para uma entidade à sua escolha, como:
+
+#### Produtos:
+- `id`, `nome`, `descrição`, `quantidade`, `preço`, `nota de avaliação`, `imagem do produto`
+
+#### Eventos:
+- `id`, `nome do evento`, `descrição`, `quantidade máxima`, `preço do ingresso`, `empresa organizadora`, `imagem do local`
+
+#### Funcionalidades:
+- ➕ Criar registros com formulário e imagem
+- 📄 Listar registros com paginação
+- ✏️ Editar registros com atualização de imagem
+- ❌ Excluir com confirmação
+- 🔐 Restrição: usuários só podem acessar seus próprios registros
+
+---
+
+### 4. 🖼️ Upload de Imagens
+- Upload e armazenamento em `storage/app/public`
+- Caminho salvo no banco de dados
+- Imagens exibidas nas views
+- Manipulação feita com a **Facade Storage** do Laravel
+
+---
+
+## ✅ Considerações Finais
+
+Este projeto demonstra:
+
+- Integração de funcionalidades essenciais em aplicações web modernas
+- Utilização do Laravel com boas práticas
+- Visual agradável e funcional com o AdminLTE
+- Segurança com autenticação de usuários
+- Suporte a conteúdo multimídia com upload de imagens
+
+> Um ótimo exemplo de aplicação Laravel completa para ambientes acadêmicos ou profissionais.
+
+
+
+## 📌 Requisitos
+
+- PHP >= 8.2
+- Composer
+- MySQL ou outro banco compatível
+- Node.js (para assets via Vite, se necessário)
+
+---
+
+## ⚙️ Como rodar o projeto
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/seu-projeto.git
+
+# Acesse o diretório
+cd seu-projeto
+
+# Instale as dependências PHP
+composer install
+
+# Instale as dependências JavaScript (se usar Vite)
+npm install && npm run dev
+
+# Configure o .env
+cp .env.example .env
+php artisan key:generate
+
+# Configure o banco de dados no .env e depois:
+php artisan migrate
+
+# Rode o servidor
+php artisan serve
