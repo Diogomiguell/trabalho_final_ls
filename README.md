@@ -1,6 +1,6 @@
 # 🚀 Trabalho Final – Laboratório de Software
 
-## 🛠️ CRUD com Laravel 11, Autenticação, Upload de Imagem e Template AdminLTE
+## 🛠️ CRUD com Laravel 11, Autenticação, Upload de Imagem, Template AdminLTE e Vue.js
 
 Este projeto é um sistema web completo construído com o framework **Laravel**, incorporando:
 
@@ -19,7 +19,7 @@ O sistema foi desenvolvido utilizando o **Laravel 11**, com aproveitamento dos s
 - Controllers e Migrations
 - Autenticação de usuários com Breeze
 - Arquitetura MVC
-- Integração com o AdminLTE para layout e UI
+- Integração com o AdminLTE e Vue.js para layout e UI
 
 > O Laravel foi escolhido por sua robustez, segurança e excelente organização de código.
 
