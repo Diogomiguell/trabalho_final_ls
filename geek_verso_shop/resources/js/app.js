@@ -1,10 +1,7 @@
-import { createApp, h } from 'vue';
+import './bootstrap';
 
-createInertiaApp({
-  resolve: name => import(`./Pages/${name}`),
-  setup({ el, App, props, plugin }) {
-    createApp({ render: () => h(App, props) })
-      .use(plugin)
-      .mount(el);
-  },
-});
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();
