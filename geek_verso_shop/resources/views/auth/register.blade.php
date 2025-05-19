@@ -13,6 +13,8 @@
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">
         @csrf
+        <h2>Criar Conta</h2>
+        
         <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('Nome')" />
@@ -40,7 +42,7 @@
         </div>
 
         <!-- Confirm Password -->
-        <div class="mt-4">
+        <div class="mt-4 ">
             <x-input-label for="password_confirmation" :value="__('Confirmar Senha')" />
 
             <x-text-input id="password_confirmation" class="block mt-1 w-full"
@@ -55,7 +57,7 @@
                 {{ __('Já tem uma conta?') }}
             </a>
 
-            <button class="btn btn-login ms-4">
+            <button class="ms-4">
                 Cadastrar-se
             </button>
         </div>
