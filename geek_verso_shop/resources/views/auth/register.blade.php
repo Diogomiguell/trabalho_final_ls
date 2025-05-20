@@ -13,19 +13,19 @@
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">
         @csrf
-        <h2>Criar Conta</h2>
+        <h2 class="text-center text-xl font-bold mb-10">Criar Conta</h2>
         
         <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('Nome')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <x-text-input class="bg-gray-600 text-gray-50 mt-1 w-full" id="name" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2 text-red" />
         </div>
 
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            <x-text-input id="email" class="bg-gray-600 text-gray-50 mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2 text-red" />
         </div>
 
@@ -33,7 +33,7 @@
         <div class="mt-4">
             <x-input-label for="password" :value="__('Senha')" />
 
-            <x-text-input id="password" class="block mt-1 w-full"
+            <x-text-input id="password" class="bg-gray-600 text-gray-50 mt-1 w-full"
                             type="password"
                             name="password"
                             required autocomplete="new-password" />
@@ -45,7 +45,7 @@
         <div class="mt-4 ">
             <x-input-label for="password_confirmation" :value="__('Confirmar Senha')" />
 
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
+            <x-text-input id="password_confirmation" class="bg-gray-600 text-gray-50 mt-1 w-full"
                             type="password"
                             name="password_confirmation" required autocomplete="new-password" />
 
@@ -57,9 +57,9 @@
                 {{ __('Já tem uma conta?') }}
             </a>
 
-            <button class="ms-4">
-                Cadastrar-se
-            </button>
+            <x-primary-button class="ms-3 bg-orange-600 hover:bg-orange-500">
+                {{ __('Cadastrar-se') }}
+            </x-primary-button>
         </div>
     </form>
 </x-guest-layout>

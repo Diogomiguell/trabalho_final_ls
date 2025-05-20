@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="{{ asset('gv_logo.png') }}" type="image/x-icon">
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
@@ -15,10 +14,10 @@
     </head>
     <body class="font-sans text-gray-900 antialiased">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
+            <div class="justify-center items-center">
                 <a href="/" class="logo-header">
                     <img src="{{ asset('gv_logo.png') }}" alt="GeekVerso Logo" class="logo">
-                    <p>GeekVerso</p>
+                    <p class="text-orange-600 font-extrabold mt-3 text-xl text-center">GeekVerso</p> 
                 </a>
             </div>
 

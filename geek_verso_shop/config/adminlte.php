@@ -44,8 +44,6 @@ return [
     'logo_img_xl_class' => 'brand-image-xs',
     'logo_img_alt' => 'GeekVerso Logo',
 
-    
-
     /*
     |--------------------------------------------------------------------------
     | Preloader Animation
@@ -110,7 +108,7 @@ return [
     'classes_topnav_container' => 'container',
 
    
-    /*
+    /* 
     |--------------------------------------------------------------------------
     | Laravel Asset Bundling
     |--------------------------------------------------------------------------
@@ -129,12 +127,6 @@ return [
     'laravel_asset_bundling' => false,
     'laravel_css_path' => 'css/app.css',
     'laravel_js_path' => 'js/app.js',
-
-    'assets' => [
-        'css' => [
-            'css/custom.css',
-        ],
-    ],
 
     /*
     |--------------------------------------------------------------------------

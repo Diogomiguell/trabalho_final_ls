@@ -15,12 +15,12 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-            <h2>Entrar</h2>
+            <h2 class="text-center text-xl font-bold mb-10">Entrar</h2>
 
             <!-- Email Address -->
             <div>
                 <x-input-label for="email" :value="__('Email')" />
-                <x-text-input id="email" class="bg-gray-600 text-gray-500 mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                <x-text-input id="email" class="bg-gray-600 text-gray-50 mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
 
@@ -28,7 +28,7 @@
             <div class="mt-4">
                 <x-input-label for="password" :value="__('Password')" />
 
-                <x-text-input id="password" class="bg-gray-600 text-gray-500 block mt-1 w-full"
+                <x-text-input id="password" class="bg-gray-600 text-gray-50 block mt-1 w-full"
                                 type="password"
                                 name="password"
                                 required autocomplete="current-password" />
@@ -39,7 +39,7 @@
             <!-- Remember Me -->
             <div class="block mt-4">
                 <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="bg-gray-600 rounded border-gray-300 text-gray-700 shadow-sm focus:ring-gray-500" name="remember">
+                    <input id="remember_me" type="checkbox" class="bg-gray-600 rounded border-gray-300 text-orange-500 shadow-sm focus:ring-gray-500" name="remember">
                     <span class="ms-2 text-sm text-gray-600">{{ __('Lembre de mim') }}</span>
                 </label>
             </div>
@@ -56,7 +56,7 @@
                     </a>
                 @endif
 
-                <x-primary-button class="ms-3">
+                <x-primary-button class="ms-3 bg-orange-600 hover:bg-orange-500">
                     {{ __('Entrar') }}
                 </x-primary-button>
             </div>
