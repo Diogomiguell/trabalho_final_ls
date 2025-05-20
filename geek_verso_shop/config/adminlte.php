@@ -6,12 +6,6 @@ return [
     |--------------------------------------------------------------------------
     | Title
     |--------------------------------------------------------------------------
-    |
-    | Here you can change the default title of your admin panel.
-    |
-    | For detailed instructions you can look the title section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
     */
 
     'title' => 'AdminLTE ',
@@ -22,12 +16,6 @@ return [
     |--------------------------------------------------------------------------
     | Favicon
     |--------------------------------------------------------------------------
-    |
-    | Here you can activate the favicon.
-    |
-    | For detailed instructions you can look the favicon section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
     */
 
     'use_ico_only' => false,
@@ -37,14 +25,6 @@ return [
     |--------------------------------------------------------------------------
     | Google Fonts
     |--------------------------------------------------------------------------
-    |
-    | Here you can allow or not the use of external google fonts. Disabling the
-    | google fonts may be useful if your admin panel internet access is
-    | restricted somehow.
-    |
-    | For detailed instructions you can look the google fonts section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
     */
 
     'google_fonts' => [
@@ -55,58 +35,21 @@ return [
     |--------------------------------------------------------------------------
     | Admin Panel Logo
     |--------------------------------------------------------------------------
-    |
-    | Here you can change the logo of your admin panel.
-    |
-    | For detailed instructions you can look the logo section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
     */
 
-    'logo' => '<b>Geek</b>Verso',
+    'logo' => '<span style="margin-right: 100px;"><b>Geek</b>Verso</span>',
     'logo_img' => 'gv_logo.png',
     'logo_img_class' => 'brand-image',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
     'logo_img_alt' => 'GeekVerso Logo',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Authentication Logo
-    |--------------------------------------------------------------------------
-    |
-    | Here you can setup an alternative logo to use on your login and register
-    | screens. When disabled, the admin panel logo will be used instead.
-    |
-    | For detailed instructions you can look the auth logo section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
-    */
-
-    'auth_logo' => [
-        'enabled' => false,
-        'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-            'alt' => 'Auth Logo',
-            'class' => '',
-            'width' => 100,
-            'height' => 100,
-        ],
-    ],
+    
 
     /*
     |--------------------------------------------------------------------------
     | Preloader Animation
     |--------------------------------------------------------------------------
-    |
-    | Here you can change the preloader animation configuration. Currently, two
-    | modes are supported: 'fullscreen' for a fullscreen preloader animation
-    | and 'cwrapper' to attach the preloader animation into the content-wrapper
-    | element and avoid overlapping it with the sidebars and the top navbar.
-    |
-    | For detailed instructions you can look the preloader section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
     */
 
     'preloader' => [
@@ -116,8 +59,9 @@ return [
             'path' => 'gv_logo.png',
             'alt' => 'GeekVerso Preloader Image',
             'effect' => 'animation__shake',
-            'width' => 300,
-            'height' => 300,
+            'width' => 100,
+            'height' => 100,
+            'class' => 'logo-preloader',
         ],
     ],
 
@@ -125,12 +69,6 @@ return [
     |--------------------------------------------------------------------------
     | User Menu
     |--------------------------------------------------------------------------
-    |
-    | Here you can activate and change the user menu.
-    |
-    | For detailed instructions you can look the user menu section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
     */
 
     'usermenu_enabled' => true,
@@ -144,12 +82,6 @@ return [
     |--------------------------------------------------------------------------
     | Layout
     |--------------------------------------------------------------------------
-    |
-    | Here we change the layout of your admin panel.
-    |
-    | For detailed instructions you can look the layout section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
-    |
     */
 
     'layout_topnav' => true,
@@ -161,33 +93,8 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Authentication Views Classes
-    |--------------------------------------------------------------------------
-    |
-    | Here you can change the look and behavior of the authentication views.
-    |
-    | For detailed instructions you can look the auth classes section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
-    |
-    */
-
-    'classes_auth_card' => 'card-outline card-primary',
-    'classes_auth_header' => '',
-    'classes_auth_body' => '',
-    'classes_auth_footer' => '',
-    'classes_auth_icon' => '',
-    'classes_auth_btn' => 'btn-flat btn-primary',
-
-    /*
-    |--------------------------------------------------------------------------
     | Admin Panel Classes
     |--------------------------------------------------------------------------
-    |
-    | Here you can change the look and behavior of the admin panel.
-    |
-    | For detailed instructions you can look the admin panel classes here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
-    |
     */
 
     'classes_body' => '',
@@ -202,70 +109,7 @@ return [
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Sidebar
-    |--------------------------------------------------------------------------
-    |
-    | Here we can modify the sidebar of the admin panel.
-    |
-    | For detailed instructions you can look the sidebar section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
-    |
-    */
-
-    'sidebar_mini' => 'lg',
-    'sidebar_collapse' => false,
-    'sidebar_collapse_auto_size' => false,
-    'sidebar_collapse_remember' => false,
-    'sidebar_collapse_remember_no_transition' => true,
-    'sidebar_scrollbar_theme' => 'os-theme-light',
-    'sidebar_scrollbar_auto_hide' => 'l',
-    'sidebar_nav_accordion' => true,
-    'sidebar_nav_animation_speed' => 300,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Control Sidebar (Right Sidebar)
-    |--------------------------------------------------------------------------
-    |
-    | Here we can modify the right sidebar aka control sidebar of the admin panel.
-    |
-    | For detailed instructions you can look the right sidebar section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
-    |
-    */
-
-    'right_sidebar' => false,
-    'right_sidebar_icon' => 'fas fa-cogs',
-    'right_sidebar_theme' => 'dark',
-    'right_sidebar_slide' => true,
-    'right_sidebar_push' => true,
-    'right_sidebar_scrollbar_theme' => 'os-theme-light',
-    'right_sidebar_scrollbar_auto_hide' => 'l',
-
-    /*
-    |--------------------------------------------------------------------------
-    | URLs
-    |--------------------------------------------------------------------------
-    |
-    | Here we can modify the url settings of the admin panel.
-    |
-    | For detailed instructions you can look the urls section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
-    */
-
-    'use_route_url' => false,
-    'dashboard_url' => '/',
-    'logout_url' => 'logout',
-    'login_url' => 'login',
-    'register_url' => 'register',
-    'password_reset_url' => 'password/reset',
-    'password_email_url' => 'password/email',
-    'profile_url' => false,
-    'disable_darkmode_routes' => false,
-
+   
     /*
     |--------------------------------------------------------------------------
     | Laravel Asset Bundling
@@ -285,6 +129,12 @@ return [
     'laravel_asset_bundling' => false,
     'laravel_css_path' => 'css/app.css',
     'laravel_js_path' => 'js/app.js',
+
+    'assets' => [
+        'css' => [
+            'css/custom.css',
+        ],
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -309,20 +159,20 @@ return [
             'type' => 'fullscreen-widget',
             'topnav_right' => true,
         ],
-
-        // Sidebar items:
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'procurar',
+            'text' => 'Home',
+            'url' => '/',
+            'topnav' => true,
         ],
         [
-            'text' => 'Sobre Nós',
-            'url' => 'about',
-            'icon' => 'far fa-fw fa-file',
-            'label' => 4,
-            'label_color' => 'success',
+            'text' => 'Seus Produtos',
+            'icon_color' => 'yellow',
+            'url' => '#',
         ],
-        ['header' => 'Configurações da conta'],
+        [
+            'text' => 'Adiconar Produtos',
+            'url' => '#',
+        ],
         [
             'text' => 'Perfil',
             'url' => 'profile',
@@ -335,21 +185,16 @@ return [
             'icon' => 'fas fa-fw fa-lock',
             'topnav_right' => true,
         ],
-        ['header' => 'Explore, Conheça e Colecione'],
         [
-            'text' => 'Home',
-            'icon_color' => 'red',
-            'url' => '#',
+            'type' => 'navbar-search',
+            'text' => 'procurar',
         ],
         [
-            'text' => 'Seus Produtos',
-            'icon_color' => 'yellow',
-            'url' => '#',
-        ],
-        [
-            'text' => 'Adiconar Produtos',
-            'icon_color' => 'cyan',
-            'url' => '#',
+            'text' => 'Sobre Nós',
+            'url' => 'about',
+            'icon' => 'far fa-fw fa-file',
+            'label' => 4,
+            'label_color' => 'success',
         ],
     ],
 

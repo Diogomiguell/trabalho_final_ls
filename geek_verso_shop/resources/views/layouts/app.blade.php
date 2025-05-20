@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="shortcut icon" href="{{ asset('gv_logo.png') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -18,7 +18,7 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    @yield('head_extra') {{-- Permite que views injetem conteúdo extra no head --}}
+    @yield('head_extra') {{-- Permite que views coloquem conteúdo extra no head --}}
 @stop
 
 @section('content_header')
