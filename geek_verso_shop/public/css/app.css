@@ -2,3 +2,7 @@
     height: 50px !important;
     width: auto;
 }
+
+.card-body {
+    background-color: #212529 !important;
+}

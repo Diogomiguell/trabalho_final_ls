@@ -2,7 +2,7 @@
 
 @section('title', 'GeekVerso - Página de Login')
 
-@section('adminlte_head')
+@section('adminlte_head') 
     @section('head_extra')
         <meta name="description" content="Painel de login da Geek Verso">
     @endsection

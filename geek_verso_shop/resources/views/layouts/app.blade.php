@@ -32,8 +32,9 @@
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
 @stop
 
 @section('js')
-    @yield('js')
+    <script src="{{ asset('js/form.js') }}"></script>
 @stop

@@ -19,7 +19,7 @@
         <div>
             <x-input-label for="name" :value="__('Nome')" />
             <x-text-input class="bg-gray-600 text-gray-50 mt-1 w-full" id="name" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2 text-red" />
+            <x-input-error :messages="$errors->get('name')" class="mt-2 text-red" /> 
         </div>
 
         <!-- Email Address -->
