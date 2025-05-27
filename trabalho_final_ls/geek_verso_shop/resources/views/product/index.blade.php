@@ -3,7 +3,7 @@
 @section('title', 'GeekVerso - Seus Produtos')
 
 @section('content')
-    @if (@session('sucess'))
+    @if (@session('success'))
         <p class="text-orange-600">
             {{ session('success') }}
         </p>
@@ -17,7 +17,8 @@
 
                     <div class="card-tools">
                         <div class="input-group input-group-sm" style="width: 200px;">
-                            <input type="text" name="table_search" class="form-control float-right" placeholder="Procurar">
+                            <input type="text" name="table_search" class="form-control float-right"
+                                placeholder="Procurar">
 
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-default">
@@ -66,7 +67,7 @@
 
                                     {{-- Nota de avaliação do produto --}}
                                     <td style="min-width: 50px; text-align: center">
-                                        {{ $product->product_rating }} 
+                                        {{ $product->product_rating }}
                                         <span>/ 5 <i class="fas fa-star text-warning"></i></span>
                                     </td>
 
@@ -83,19 +84,23 @@
 
                                     {{-- Ações deletar e editar --}}
                                     <td style="min-width: 80px">
-                                        <a href="#" class="btn btn-sm btn-outline-primary" title="Editar">
+                                        <button type="button" class="btn btn-outline-info" data-toggle="modal">
                                             <i class="fas fa-edit"></i>
-                                        </a>
-                                        <br><br>
-                                        <form action="{{-- {{ route('produtos.destroy', $product->id) }} --}}" method="POST">
-                                            @method('DELETE')
-                                            @csrf
-                                            <button type="submit" class="btn btn-sm btn-outline-danger" title="excluir"
-                                                    data-bs-data="modal"
-                                                    data-bs-target >
-                                                <i class="fas fa-trash-alt"></i>
-                                            </button>     
-                                        </form>                     
+                                        </button>
+                                        {{-- Importando a modal edit --}}
+                                        {{-- @include('components/') --}}
+
+                                        &nbsp;
+
+                                        {{-- Botão que abre o modal destroy --}}
+                                        <button type="button" class="btn btn-outline-danger" data-toggle="modal"
+                                            data-target="#deleteModal{{ $product->id }}">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+
+                                        {{-- Importanto a modal destroy --}}
+                                        @include('components/destroy-modal')
+                                        
                                     </td>
                                 </tr>
                             @empty

@@ -6,6 +6,7 @@ use App\Http\Requests\ProductRequest;
 use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -74,13 +75,14 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Product $id)
-    {
-        
-        $product = Product::find($id);
-        $product->delete;
+    public function destroy(Product $produto)
+    {   
+        //Deletar a imagem do produto a partir do disco onde está localizada a pasta public
+        Storage::disk('public')->delete($produto->product_file_name); 
+        $produto->delete();
 
         //Redirecionar a página
-        return redirect('produtos.index');
+        return redirect()->route('produtos.index')
+                        ->with('success', 'Produto removido com sucesso');
     }
 }

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', function () {
+Route::get('/', function () { 
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -17,10 +17,6 @@ Route::middleware('auth')->group(function() {
         //cria apenas um nome de rota para todos os métodos do controlador
         'produtos' => ProductController::class
     ]);
-
-    Route::get('/adicionar', function () {
-        return view('product.create');
-    })->name('adicionar');
 
     Route::get('/about', function () {
         return view('about');

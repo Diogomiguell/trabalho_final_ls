@@ -147,7 +147,7 @@ return [
         ],
         [
             'text' => 'Adiconar Produtos',
-            'url' => 'adicionar',
+            'url' => 'produtos/create',
         ],
         [
             'type' => 'navbar-search',
