@@ -3,17 +3,18 @@
 @section('title', 'GeekVerso - Seus Produtos')
 
 @section('content')
-    @if (@session('success'))
-        <p class="text-orange-600">
-            {{ session('success') }}
-        </p>
-    @endif
-
     <div class="row" style="margin-top: 40px">
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Lista de Produtos</h3>
+
+                    <br>
+                    @if (@session('success'))
+                        <p style="color: #f38c17">
+                            {{ session('success') }}
+                        </p>
+                    @endif
 
                     <div class="card-tools">
                         <div class="input-group input-group-sm" style="width: 200px;">
@@ -84,7 +85,8 @@
 
                                     {{-- Ações deletar e editar --}}
                                     <td style="min-width: 80px">
-                                        <button type="button" class="btn btn-outline-info" data-toggle="modal">
+                                        <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                                            data-target="#updateModal{{ $product->id }}">
                                             <i class="fas fa-edit"></i>
                                         </button>
                                         {{-- Importando a modal edit --}}
@@ -92,7 +94,7 @@
 
                                         &nbsp;
 
-                                        {{-- Botão que abre o modal destroy --}}
+                                        {{-- Botão de gatilho do Modal --}}
                                         <button type="button" class="btn btn-outline-danger" data-toggle="modal"
                                             data-target="#deleteModal{{ $product->id }}">
                                             <i class="fas fa-trash-alt"></i>
@@ -100,7 +102,6 @@
 
                                         {{-- Importanto a modal destroy --}}
                                         @include('components/destroy-modal')
-                                        
                                     </td>
                                 </tr>
                             @empty
