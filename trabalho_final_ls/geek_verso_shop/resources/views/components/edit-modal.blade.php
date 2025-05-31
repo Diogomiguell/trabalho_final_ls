@@ -53,12 +53,12 @@
                                 <label for="product_quantity" class="form-label">Quantidade do Produto</label>
                                 <div class="input-group">
                                     <button type="button" class="btn btn-outline-light"
-                                        onclick="adjust('quantity', -1)">-</button>
-                                    <input type="number" name="product_quantity" id="quantity"
+                                        onclick="adjust('quantity{{ $product->id }}', -1)">-</button>
+                                    <input type="number" name="product_quantity" id="quantity{{ $product->id }}"
                                         class="form-control text-center bg-dark text-white border-secondary"
                                         value="{{ $product->product_quantity }}" min="1" required>
                                     <button type="button" class="btn btn-outline-light"
-                                        onclick="adjust('quantity', 1)">+</button>
+                                        onclick="adjust('quantity{{ $product->id }}', 1)">+</button>
                                     @error('product_quantity')
                                         <div class="invalid-feedback d-block">{{ $message }}</div>
                                     @enderror
@@ -67,14 +67,14 @@
 
                             {{-- Preço do Produto --}}
                             <div class="mb-3">
-                                <label for="product_price" class="form-label">Preço do Produto</label>
+                                <label for="product_price{{ $product->id }}" class="form-label">Preço do Produto</label>
                                 <div class="input-group">
                                     <span class="input-group-text bg-dark text-white border-secondary">R$</span>
-                                    <input type="number" name="product_price" id="price"
+                                    <input type="number" name="product_price{{ $product->id }}" id="price{{ $product->id }}"
                                         class="form-control text-end bg-dark text-white border-secondary"
                                         value="{{ $product->product_price }}" min="0" step="0.01" required>
                                     <button type="button" class="btn btn-outline-light"
-                                        onclick="adjust('price', 1)">+</button>
+                                        onclick="adjust('price{{ $product->id }}', 1)">+</button>
                                     @error('product_price')
                                         <div class="invalid-feedback d-block">{{ $message }}</div>
                                     @enderror
@@ -84,11 +84,11 @@
                             {{-- Nota de Avaliação do Produto --}}
                             <div class="mb-3">
                                 <label class="form-label">Avaliação do Produto: <span
-                                        id="rating_value">{{ $product->product_rating }}</span>
+                                        id="rating_value{{ $product->id }}">{{ $product->product_rating }}</span>
                                 </label>
                                 <input type="range" class="form-range" min="0" max="5" step="0.1"
-                                    name="product_rating" id="product_rating" value="{{ $product->product_rating }}"
-                                    oninput="document.getElementById('rating_value').textContent = this.value" required>
+                                    name="product_rating" id="product_rating{{ $product->id }}" value="{{ $product->product_rating }}"
+                                    oninput="document.getElementById('rating_value{{ $product->id }}').textContent = this.value" required>
                                 @error('product_rating')
                                     <div class="invalid-feedback d-block">{{ $message }}</div>
                                 @enderror
