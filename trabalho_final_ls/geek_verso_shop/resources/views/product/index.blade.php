@@ -86,11 +86,11 @@
                                     {{-- Ações deletar e editar --}}
                                     <td style="min-width: 80px">
                                         <button type="button" class="btn btn-outline-info" data-toggle="modal"
-                                            data-target="#updateModal{{ $product->id }}">
+                                            data-target="#editModal{{ $product->id }}">
                                             <i class="fas fa-edit"></i>
                                         </button>
                                         {{-- Importando a modal edit --}}
-                                        {{-- @include('components/') --}}
+                                        @include('components/edit-modal')
 
                                         &nbsp;
 

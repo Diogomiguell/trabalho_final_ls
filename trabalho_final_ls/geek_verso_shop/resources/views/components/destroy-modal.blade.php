@@ -21,7 +21,7 @@
                         <br>
                         <strong class="text-break text-warning">
                             {{ $product->product_name }}
-                        </strong>?
+                        </strong>? 
                     </p>
                 </div>
 
