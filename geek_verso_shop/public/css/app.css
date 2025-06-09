@@ -6,3 +6,7 @@
 .card-body {
     background-color: #212529 !important;
 }
+
+.text-break {
+    word-wrap: break-word;
+}

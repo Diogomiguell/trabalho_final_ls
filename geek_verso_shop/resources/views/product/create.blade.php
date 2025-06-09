@@ -20,18 +20,18 @@
                     <div class="mb-3">
                         <label for="product_name" class="form-label">Nome do Produto</label>
                         <input type="text" name="product_name" id="product_name"
-                            class="form-control bg-dark text-white border-secondary @error('product_name') is-invalid @enderror"
+                            class="form-control bg-dark text-white border-secondary"
                             value="{{ old('product_name') }}" required autofocus>
                         @error('product_name')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
-                    </div>
+                    </div> 
 
                     {{-- Descrição do Produto --}}
                     <div class="mb-3">
                         <label for="product_description" class="form-label">Descrição do Produto</label>
-                        <textarea name="product_description" id="product_description" maxlength="255" rows="4"
-                            class="form-control bg-dark text-white border-secondary @error('product_description') is-invalid @enderror"
+                        <textarea name="product_description" id="product_description" maxlength="255" rows="2"
+                            class="form-control bg-dark text-white border-secondary"
                             placeholder="Máximo de 255 caracteres" required>{{ old('product_description') }}</textarea>
                         @error('product_description')
                             <div class="invalid-feedback">{{ $message }}</div>
@@ -44,7 +44,7 @@
                         <div class="input-group">
                             <button type="button" class="btn btn-outline-light" onclick="adjust('quantity', -1)">-</button>
                             <input type="number" name="product_quantity" id="quantity"
-                                class="form-control text-center bg-dark text-white border-secondary @error('product_quantity') is-invalid @enderror"
+                                class="form-control text-center bg-dark text-white border-secondary"
                                 value="{{ old('product_quantity', 1) }}" min="1" required>
                             <button type="button" class="btn btn-outline-light" onclick="adjust('quantity', 1)">+</button>
                             @error('product_quantity')
@@ -59,7 +59,7 @@
                         <div class="input-group">
                             <span class="input-group-text bg-dark text-white border-secondary">R$</span>
                             <input type="number" name="product_price" id="price"
-                                class="form-control text-end bg-dark text-white border-secondary @error('product_price') is-invalid @enderror"
+                                class="form-control text-end bg-dark text-white border-secondary"
                                 value="{{ old('product_price', '0.00') }}" min="0" step="0.01" required>
                             <button type="button" class="btn btn-outline-light" onclick="adjust('price', 1)">+</button>
                             @error('product_price')
@@ -71,8 +71,9 @@
                     {{-- Nota de Avaliação do Produto --}}
                     <div class="mb-3">
                         <label class="form-label">Avaliação do Produto: <span
-                                id="rating_value">{{ old('product_rating', 2.5) }}</span></label>
-                        <input type="range" class="form-range @error('product_rating') is-invalid @enderror"
+                                id="rating_value">{{ old('product_rating', 2.5) }}</span>
+                        </label>
+                        <input type="range" class="form-range"
                             min="0" max="5" step="0.1" name="product_rating" id="product_rating"
                             value="{{ old('product_rating', 2.5) }}"
                             oninput="document.getElementById('rating_value').textContent = this.value" required>
@@ -85,7 +86,7 @@
                     <div class="mb-3">
                         <label for="product_file_name" class="form-label">Imagem do Produto</label>
                         <input type="file" name="product_file_name" id="product_file_name"
-                            class="form-control bg-dark text-white border-secondary @error('product_file_name') is-invalid @enderror"
+                            class="form-control bg-dark text-white border-secondary"
                             required>
                         @error('product_file_name')
                             <div class="invalid-feedback d-block">{{ $message }}</div>
@@ -100,16 +101,4 @@
             </div>
         </div>
     </div>
-
-    <script>
-        function adjust(id, delta) {
-            const input = document.getElementById(id);
-            let value = parseFloat(input.value);
-
-            if (isNaN(value)) value = 0;
-            value += delta;
-            if (value < 0) value = 0;
-            input.value = value.toFixed(id === 'price' ? 2 : 0);
-        }
-    </script>
 @endsection

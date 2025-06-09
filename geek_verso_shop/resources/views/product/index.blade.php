@@ -3,21 +3,23 @@
 @section('title', 'GeekVerso - Seus Produtos')
 
 @section('content')
-    @if (@session('sucess'))
-        <p class="text-orange-600">
-            {{ session('success') }}
-        </p>
-    @endif
-
     <div class="row" style="margin-top: 40px">
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Lista de Produtos</h3>
 
+                    <br>
+                    @if (@session('success'))
+                        <p style="color: #f38c17">
+                            {{ session('success') }}
+                        </p>
+                    @endif
+
                     <div class="card-tools">
                         <div class="input-group input-group-sm" style="width: 200px;">
-                            <input type="text" name="table_search" class="form-control float-right" placeholder="Procurar">
+                            <input type="text" name="table_search" class="form-control float-right"
+                                placeholder="Procurar">
 
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-default">
@@ -66,7 +68,7 @@
 
                                     {{-- Nota de avaliação do produto --}}
                                     <td style="min-width: 50px; text-align: center">
-                                        {{ $product->product_rating }} 
+                                        {{ $product->product_rating }}
                                         <span>/ 5 <i class="fas fa-star text-warning"></i></span>
                                     </td>
 
@@ -82,14 +84,24 @@
                                     </td>
 
                                     {{-- Ações deletar e editar --}}
-                                    <td>
-                                        <a href="#" class="btn btn-sm btn-outline-primary" title="Editar">
+                                    <td style="min-width: 80px">
+                                        <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                                            data-target="#editModal{{ $product->id }}">
                                             <i class="fas fa-edit"></i>
-                                        </a>
+                                        </button>
+                                        {{-- Importando a modal edit --}}
+                                        @include('components/edit-modal')
+
                                         &nbsp;
-                                        <a href="#" class="btn btn-sm btn-outline-danger" title="Excluir">
+
+                                        {{-- Botão de gatilho do Modal --}}
+                                        <button type="button" class="btn btn-outline-danger" data-toggle="modal"
+                                            data-target="#deleteModal{{ $product->id }}">
                                             <i class="fas fa-trash-alt"></i>
-                                        </a>
+                                        </button>
+
+                                        {{-- Importanto a modal destroy --}}
+                                        @include('components/destroy-modal')
                                     </td>
                                 </tr>
                             @empty
