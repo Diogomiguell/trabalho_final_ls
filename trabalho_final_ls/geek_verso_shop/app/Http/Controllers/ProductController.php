@@ -13,7 +13,7 @@ class ProductController extends Controller
     //CRUD: Read
     public function index()
     {
-        //Carregar dados do DB
+        // Recuperar registros do BD
         $products = Product::where('user_id', Auth::user()->id)->paginate(5);
 
         //Carregar view
@@ -27,7 +27,7 @@ class ProductController extends Controller
         return view('product.create');
     }
 
-    //Regra de negócio
+    //Regra de negócio 
     public function store(ProductRequest $request)
     {
         //Salvar imagens na pasta storage/app/public
@@ -48,25 +48,7 @@ class ProductController extends Controller
             ->with('success', 'Produto adicionado com sucesso');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Product $product)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Product $produto)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
+    //CRUD: Update
     public function update(ProductRequest $request, Product $produto)
     {
         //Pegar os dados válidos do formulário e transformar em um array
@@ -79,7 +61,7 @@ class ProductController extends Controller
             //Salvar a nova imagem na pasta storage/app/public
             $file = $request->file('product_file_name');
             $file_name = rand(10, 999999) . '-' . $file->getClientOriginalName();
-            $path = $file->storeAs('image_uploads', $file_name, 'public'); // <- o segredo
+            $path = $file->storeAs('image_uploads', $file_name, 'public'); 
             $data['product_file_name'] = $path;
         }
 
@@ -100,9 +82,7 @@ class ProductController extends Controller
             ->with('success', 'Produto editado com sucesso');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    //CRUD: Delete
     public function destroy(Product $produto)
     {
         //Deletar a imagem do produto a partir do disco onde está localizada a pasta public
